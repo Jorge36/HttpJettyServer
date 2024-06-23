@@ -50,7 +50,8 @@ To use encrypted protocols, configure the SslContextFactory with the keyStore in
 
 Below I added screenshots of tests carried out.
 
-**JDk Http Server**
+**Http Server with JDK**
+
 
 Endpoint does not exist
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/get%20request%20404.png)
@@ -68,5 +69,27 @@ Server does not support HTTP2, therefore protocol is not upgraded
 Server does not support HTTP2, empty response
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/enable%20use%20of%20HTTP2%20without%20HTTP1.1%20Upgrade.png)
 
+**Http Server with Jetty 12**
+
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/jetty%20application%20compiled%20with%20maven.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/listening%20in%20port%208080.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/get%20request%20404.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/get%20request%20200.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/get%20request%20upgrading%20to%20http2.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/get%20request%20enable%20use%20of%20HTTP2%20without%20HTTP1%20upgrading.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/post%20request%20debug%20task.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20test%20task.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20upgrading%20to%20http2.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20enable%20use%20of%20HTTP2%20without%20HTTP1%20upgrading.png)
 
 
