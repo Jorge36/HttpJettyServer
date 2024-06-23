@@ -12,7 +12,7 @@ In this repository, there are also a HTTP Server and a HTTP Client applications 
 I used curl (command line tool), Postman and Http Client (provided in the course) to test the Http Server.
 
 The Http Server and client provided in the course use JDK libraries for the development. JDK built-in Http Client support HTTP/2 and HTTP/1.1 connection pooling by default. 
-OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two applications. For Http1, we need to delay the second request to reuse the same connection, otherwise the connection is closed and a new one is created to send a second request (piece of code below shows it).
+OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two applications. For Http1.1, we need to delay the second request to reuse the same connection, otherwise the connection is closed and a new one is created to send a second request (piece of code below shows it).
 
 ```
     public List<String> sendTasksToWorkers(List<String> workersAddresses, List<String> tasks) {
@@ -31,5 +31,19 @@ OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two 
                 throw new RuntimeException(e);
             }
         }
+ ```
+
+On the other hand, the application coded with Jetty 12 supports clear HTTP/1.1 and HTTP/2. Jetty will start parsing the incoming bytes as HTTP/1.1, but then realize that they are HTTP/2 bytes and will therefore upgrade from HTTP/1.1 to HTTP/2.
+
+ ```
+        val server = Server()
+        // The HTTP configuration object.
+        val httpConfig = HttpConfiguration()
+        // The ConnectionFactory for clear-text HTTP/2.
+        val http2c = HTTP2CServerConnectionFactory(httpConfig)
+        // The ConnectionFactory for HTTP/1.1.
+        val http11 = HttpConnectionFactory()
+        // The ServerConnector instance.
+        val connector = ServerConnector(server, http11, http2c)
  ```
 
