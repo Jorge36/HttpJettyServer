@@ -75,7 +75,7 @@ Server does not support HTTP2, empty response
 mvn clean compile to compile source code<br>
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/jetty%20application%20compiled%20with%20maven.png)
 
-Running Http Server
+Running Http Server<br>
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/listening%20in%20port%208080.png)
 
 Endpoint does not exist
@@ -93,8 +93,10 @@ Protocol used is HTTP/2
 
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20test%20task.png)
 
+Protocol is not upgraded, because it is a post request
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20upgrading%20to%20http2.png)
 
+Protocol used is HTTP/2
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20enable%20use%20of%20HTTP2%20without%20HTTP1%20upgrading.png)
 
 
