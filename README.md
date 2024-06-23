@@ -124,3 +124,10 @@ Upgrade header inviting the server to upgrade
 Upgrade is not accepted, server response uses HTTP/1.1
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/34a14ef16f280a0fe9be076dd7e570add4cfa2a5/testing/http2/result%20http1%20upgrade%20http2.png)
 
+There are three videos on https://drive.google.com/drive/folders/1sx8MxSMudYnvIJ94m2aRc1QpFMVA7R9v?usp=sharing
+
+1. enable use of HTTP2 without HTTP1.1 Upgrade.mkv: post request to Http Server with Jetty 12 using HTTP/2.
+2. post request jdk client - jdk server.mkv: Testing http server with JDK 11 using client application provided in the course
+3. post request jdk client - jetty server.mkv: Testing http server with Jetty 12 using client application provided in the course
+
+
