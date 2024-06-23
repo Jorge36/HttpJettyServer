@@ -50,9 +50,11 @@ To use encrypted protocols, configure the SslContextFactory with the keyStore in
 
 Below I added screenshots of tests carried out.
 
-*JDk Http Server
+**JDk Http Server**
 
+Endpoint does not exist
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/get%20request%20404.png)
+
 
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/get%20request%20status%20200.png)
 
@@ -60,8 +62,10 @@ Below I added screenshots of tests carried out.
 
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/post%20request%20test%20200.png)
 
+Server does not support HTTP2, therefore protocol is not upgraded
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/http1%20upgrading%20to%20http2.png)
 
+Server does not support HTTP2, empty response
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/enable%20use%20of%20HTTP2%20without%20HTTP1.1%20Upgrade.png)
 
 
