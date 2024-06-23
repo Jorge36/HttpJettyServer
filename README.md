@@ -130,4 +130,9 @@ There are three videos on https://drive.google.com/drive/folders/1sx8MxSMudYnvIJ
 2. post request jdk client - jdk server.mkv: Testing http server with JDK 11 using client application provided in the course
 3. post request jdk client - jetty server.mkv: Testing http server with Jetty 12 using client application provided in the course
 
+Additional Information:
+1. https://jetty.org/
+2. https://curl.se/docs/http2.html
+3. https://www.rfc-editor.org/rfc/rfc7540?msclkid=198be25fc87b11eca21146cdba8d08f5#section-3.2
+4. https://github.com/jetty/jetty.project/issues/11588 (to understand why only get requests are upgraded)
 
