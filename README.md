@@ -50,28 +50,19 @@ To use encrypted protocols, configure the SslContextFactory with the keyStore in
 
 Below I added screenshots of tests carried out.
 
-![alt_text]()
+*JDk Http Server
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/get%20request%20404.png)
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/get%20request%20status%20200.png)
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/post%20request%20task%20200.png)
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/post%20request%20test%20200.png)
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/http1%20upgrading%20to%20http2.png)
 
-![alt_text]()
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jdk/enable%20use%20of%20HTTP2%20without%20HTTP1.1%20Upgrade.png)
 
-![alt_text]()
-
-![alt_text]()
-
-![alt_text]()
-
-![alt_text]()
-![alt_text]()
-![alt_text]()
 
 
