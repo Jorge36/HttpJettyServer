@@ -104,12 +104,23 @@ Protocol used is HTTP/2
 Get request
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/get%20request%20status%20postman.png)
 
+Post request
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20header%20postman.png)
 
-Post request
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20body%20postman.jpg)
 
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20response%20header%20postman.png)
 
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20result%20postman.png)
+
+**Wireshark running Http Server with Jetty 12**
+
+Post request ask to upgrade to HTTP/2
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/34a14ef16f280a0fe9be076dd7e570add4cfa2a5/testing/http2/request%20post%20to%20enable%20use%20of%20http2.png)
+
+Upgrade header inviting the server to upgrade
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/34a14ef16f280a0fe9be076dd7e570add4cfa2a5/testing/http2/http1%20upgrade%20http2.png)
+
+Upgrade is not accepted, server response uses HTTP/1.1
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/34a14ef16f280a0fe9be076dd7e570add4cfa2a5/testing/http2/result%20http1%20upgrade%20http2.png)
 
