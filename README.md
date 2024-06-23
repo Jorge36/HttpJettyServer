@@ -50,7 +50,7 @@ To use encrypted protocols, configure the SslContextFactory with the keyStore in
 
 Below I added screenshots of tests carried out.
 
-**Http Server with JDK**
+**Http Server with JDK 11**
 
 
 Endpoint does not exist<br>
