@@ -5,8 +5,31 @@ Http Server using Jetty 12 which exposes two endpoints /status and /task. Techno
 2. Kotlin PL (language version 1.9, API version 1.9 and target platform JVM 1.8)
 3. Maven 3.9.6
 4. Intellij IDEA 2024.1.1 (Community Edition)
-5. Jetty 12
+5. Jetty 12 (Embedded Jetty with Maven)
 
-There are a HTTP Server and a HTTP Client applications which are taken from the course [Distributed Systems & Cloud Computing with Java](https://www.udemy.com/course/distributed-systems-cloud-computing-with-java/). The Http Server, I coded using Jetty 12 and Kotlin, exposes the same endpoints as the one provided by Michael Pogrebinsky. In other words, they are identical regarding functionalities, but they used different technologies.
+In this repository, there are also a HTTP Server and a HTTP Client applications which are taken from the course [Distributed Systems & Cloud Computing with Java](https://www.udemy.com/course/distributed-systems-cloud-computing-with-java/). The Http Server, which I coded using Jetty 12 and Kotlin, exposes the same endpoints as the one provided by Michael Pogrebinsky. In other words, they are identical regarding functionalities, but they used different technologies.
 
 I used curl (command line tool), Postman and Http Client (provided in the course) to test the Http Server.
+
+The Http Server and client provided in the course use JDK libraries for the development. JDK built-in Http Client support HTTP/2 and HTTP/1.1 connection pooling by default. 
+OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two applications. For Http1, we need to delay the second request to reuse the same connection, otherwise the connection is closed and a new one is created to send a second request (piece of code below shows it).
+
+```
+    public List<String> sendTasksToWorkers(List<String> workersAddresses, List<String> tasks) {
+        CompletableFuture<String>[] futures = new CompletableFuture[workersAddresses.size()];
+
+        for (int i = 0; i < workersAddresses.size(); i++) {
+            String workerAddress = workersAddresses.get(i);
+            String task = tasks.get(i);
+
+            byte[] requestPayload = task.getBytes();
+            futures[i] = webClient.sendTask(workerAddress, requestPayload);
+
+            try {
+                Thread.sleep(2000); // The main thread sleeps for the 2000 milliseconds, which is 2 sec
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+ ```
+
