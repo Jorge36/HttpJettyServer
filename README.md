@@ -72,7 +72,7 @@ Server does not support HTTP2, empty response
 **Http Server with Jetty 12**
 
 
-mvn clean compile to compile source code<br>
+mvn clean compile command to compile source code
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/1195469bcb40563a8bdd071423bbb857e9a5435b/testing/jetty/jetty%20application%20compiled%20with%20maven.png)
 
 Running Http Server<br>
@@ -99,4 +99,17 @@ Protocol is not upgraded, because it is a post request
 Protocol used is HTTP/2
 ![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/jetty/post%20request%20enable%20use%20of%20HTTP2%20without%20HTTP1%20upgrading.png)
 
+**Postman**
+
+Get request
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/get%20request%20status%20postman.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20header%20postman.png)
+
+Post request
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20body%20postman.jpg)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20response%20header%20postman.png)
+
+![alt_text](https://github.com/Jorge36/HttpJettyServer/blob/f5d1a31f636851b33b70e04667e840dc6298996b/testing/postman/post%20request%20result%20postman.png)
 
