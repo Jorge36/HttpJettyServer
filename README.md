@@ -12,7 +12,7 @@ In this repository, there are also a HTTP Server and a HTTP Client applications 
 I used curl (command line tool), Postman and Http Client (provided in the course) to test the Http Server. Also Wireshark to capture localhost traffic capture.
 
 The Http Server and client provided in the course use JDK libraries for the development. JDK built-in Http Client support HTTP/2 and HTTP/1.1 connection pooling by default. 
-OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two applications. For Http1.1, we need to delay the second request to reuse the same connection, otherwise the connection is closed and a new one is created to send a second request (piece of code below shows it).
+OpenJDK and JRE 11, Maven 3.9.6 were used to compile, install and run these two applications. For Http1.1, we need to delay the second request to reuse the same connection -to receive the response before sending the next request-, otherwise the connection is closed and a new one is created to send a second request (piece of code below shows it).
 
 ```
     public List<String> sendTasksToWorkers(List<String> workersAddresses, List<String> tasks) {
